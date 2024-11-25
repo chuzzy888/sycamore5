@@ -183,7 +183,7 @@ export default {
             <div class="flex justify-between items-center">
               <h3 class="text-lg font-bold mb-2">UX review presentations</h3>
               <img
-                src="@/assets/images/icon.png"
+                src="@/assets/images/icn.png"
                 alt="icon"
                 class="object-cover h-2"
               />
@@ -288,7 +288,7 @@ export default {
               {{ blog.title }}
             </h3>
             <img
-              src="@/assets/images/icon.png"
+              src="@/assets/images/icn.png"
               alt="icon"
               class="object-cover h-2"
             />
