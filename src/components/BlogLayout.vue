@@ -140,9 +140,12 @@ export default {
 
 <template>
   <div class="bg-white px-6 md:px-16 lg:px-24 py-8">
+    <!-- Header Section -->
     <section class="text-center mb-12">
       <p class="text-[#7F56D9] font-semibold">Our blog</p>
-      <h1 class="text-4xl font-bold mb-4">Stories and interviews</h1>
+      <h1 class="text-4xl font-medium mb-4 text-[#101828]">
+        Stories and interviews
+      </h1>
       <p class="text-[#667085] max-w-xl mx-auto font-normal">
         Subscribe to learn about new product features, the latest in technology,
         solutions, and updates.
@@ -156,7 +159,7 @@ export default {
           />
           <p class="text-sm flex gap-1 items-start text-[#667085] mt-2">
             We care about your data in our
-            <span class="underline"> privacy policy</span>
+            <span class="underline cursor-pointer"> privacy policy</span>
           </p>
         </div>
         <div class="">
@@ -167,6 +170,7 @@ export default {
       </div>
     </section>
 
+    <!-- Recent Blog Post Section -->
     <section class="mb-12">
       <h2 class="text-2xl font-semibold mb-6 text-[#101828]">
         Recent blog posts
@@ -181,7 +185,9 @@ export default {
           <div class="py-4 2xl:py-10">
             <p class="text-[#6941C6]">Olivia Rhye • 20 Jan 2022</p>
             <div class="flex justify-between items-center">
-              <h3 class="text-lg font-bold mb-2">UX review presentations</h3>
+              <h3 class="text-lg font-bold mb-2 text-[#101828]">
+                UX review presentations
+              </h3>
               <img
                 src="@/assets/images/icn.png"
                 alt="icon"
@@ -220,7 +226,9 @@ export default {
             />
             <div class="flex-1 h-full md:w-2/4">
               <p class="text-[#6941C6] mb-1">Phoenix Baker • 19 Jan 2022</p>
-              <h3 class="font-bold text-lg mb-1">Migrating to Linear 101</h3>
+              <h3 class="font-bold text-lg mb-1 text-[#101828]">
+                Migrating to Linear 101
+              </h3>
               <p class="text-gray-600 text-sm mb-3">
                 Linear helps streamline software projects, sprints, tasks, and
                 bug tracking. Here’s how to get...
@@ -248,7 +256,9 @@ export default {
             />
             <div class="flex-1 h-full md:w-2/4">
               <p class="text-[#6941C6]">Lana Steiner • 18 Jan 2022</p>
-              <h3 class="font-bold text-lg mb-1">Building your API Stack</h3>
+              <h3 class="font-bold text-lg mb-1 text-[#101828]">
+                Building your API Stack
+              </h3>
               <p class="text-gray-600 text-sm mb-3">
                 The rise of RESTful APIs has been met by a rise in tools for
                 creating, testing, and manag...
@@ -268,6 +278,7 @@ export default {
         </div>
       </div>
     </section>
+    <!-- All Blog Post Section -->
 
     <section>
       <h2 class="text-2xl font-semibold mb-6 text-[#101828]">All blog posts</h2>
@@ -306,37 +317,71 @@ export default {
         </div>
       </div>
     </section>
+    <!-- Pagination Section -->
 
     <section class="flex flex-col items-center justify-center py-8">
       <div class="w-full border-t border-gray-200 mb-6"></div>
+      <div class="md:hidden flex justify-between items-center w-full">
+        <img src="@/assets/images/arl.png" alt="icon" class="object-cover" />
+        <p class="text-gray-700 md:hidden text-sm">Page 1 of 10</p>
+        <img src="@/assets/images/arr.png" alt="icon" class="object-cover" />
+      </div>
 
-      <nav class="flex items-center space-x-2">
+      <div class="hidden md:flex justify-between items-center w-full">
         <button
-          class="px-4 py-2 text-gray-500 hover:text-gray-700 flex items-center"
+          class="py-2 text-[#667085] hover:text-gray-700 flex items-center"
         >
-          <span class="mr-2">&larr;</span> Previous
+          <span class="mr-2"
+            ><img src="@/assets/images/arl.png" alt="icon" class="object-cover"
+          /></span>
+          Previous
         </button>
 
-        <div class="md:flex space-x-2 hidden">
+        <div class="flex items-center space-x-2 text-[#667085]">
           <button
-            v-for="page in 10"
-            :key="page"
-            class="w-10 h-10 flex items-center justify-center rounded-lg"
-            :class="{
-              'bg-[#F4EBFF] text-[#7F56D9]': page === 1,
-              'text-gray-700 hover:bg-gray-100': page !== 1,
-            }"
+            class="w-10 h-10 flex items-center justify-center rounded-lg bg-[#F4EBFF] text-[#7F56D9]"
           >
-            {{ page }}
+            1
+          </button>
+          <button
+            class="w-10 h-10 flex items-center justify-center rounded-lg text-gray-700 hover:bg-gray-100"
+          >
+            2
+          </button>
+          <button
+            class="w-10 h-10 flex items-center justify-center rounded-lg text-gray-700 hover:bg-gray-100"
+          >
+            3
+          </button>
+
+          <span class="text-gray-500">...</span>
+
+          <button
+            class="w-10 h-10 flex items-center justify-center rounded-lg text-gray-700 hover:bg-gray-100"
+          >
+            8
+          </button>
+          <button
+            class="w-10 h-10 flex items-center justify-center rounded-lg text-gray-700 hover:bg-gray-100"
+          >
+            9
+          </button>
+          <button
+            class="w-10 h-10 flex items-center justify-center rounded-lg text-gray-700 hover:bg-gray-100"
+          >
+            10
           </button>
         </div>
 
         <button
-          class="px-4 py-2 text-gray-500 hover:text-gray-700 flex items-center"
+          class="py-2 text-[#667085] hover:text-gray-700 flex items-center"
         >
-          Next <span class="ml-2">&rarr;</span>
+          Next
+          <span class="ml-2"
+            ><img src="@/assets/images/arr.png" alt="icon" class="object-cover"
+          /></span>
         </button>
-      </nav>
+      </div>
     </section>
   </div>
 </template>
