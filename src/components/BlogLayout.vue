@@ -162,7 +162,7 @@ export default {
             <span class="underline cursor-pointer"> privacy policy</span>
           </p>
         </div>
-        <div class="">
+        <div>
           <button class="bg-[#7F56D9] text-white p-2 px-3 rounded-lg w-full">
             Subscribe
           </button>
@@ -291,7 +291,7 @@ export default {
           <img
             :src="getImageUrl(blog.image)"
             alt="Blog Image"
-            class="w-full h-40 object-cover mb-4"
+            class="w-full h-52 object-cover mb-4"
           />
           <p class="text-[#6941C6]">{{ blog.date }}</p>
           <div class="flex justify-between items-center">
